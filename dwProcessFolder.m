@@ -3,7 +3,7 @@ clear, clc
 % -------------------------
 % parameter
 
-fpath = '/home/mc457/files/CellBiology/IDAC/Marcelo/Seidman/Toepfer/DemoVideoCrops';
+fpath = '~/Downloads/SarcTrackSampleVideos';
 
 % -------------------------
 % batch processing

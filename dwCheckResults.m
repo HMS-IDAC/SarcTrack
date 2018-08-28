@@ -3,7 +3,7 @@ clear, clc
 % -------------------------
 % parameter
 
-path = '/home/mc457/files/CellBiology/IDAC/Marcelo/Seidman/Toepfer/DemoVideoCrops/Crop2.avi';
+path = '~/Downloads/SarcTrackSampleVideos/Sample2.avi';
 
 % -------------------------
 % average distance / frequency estimation

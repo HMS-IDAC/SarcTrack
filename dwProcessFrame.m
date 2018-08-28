@@ -2,7 +2,7 @@ clear, clc
 
 %% read and display
 
-path = '/home/mc457/files/CellBiology/IDAC/Marcelo/Seidman/Toepfer/DemoVideoCrops/Crop1.avi';
+path = '~/Downloads/SarcTrackSampleVideos/Sample1.avi';
 
 v = VideoReader(path);
 T = [];

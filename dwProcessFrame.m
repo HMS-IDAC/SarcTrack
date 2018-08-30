@@ -2,7 +2,7 @@ clear, clc
 
 %% read and display
 
-path = '~/Downloads/SarcTrackSampleVideos/Sample1.avi';
+path = '~/Downloads/SarcTrackSampleVideos/Sample2.avi';
 
 v = VideoReader(path);
 T = [];
@@ -19,8 +19,8 @@ frameIndex = 50;
 
 ds = 10:0.2:15; % range of distances (in pixels)
 stretch = 0.5; % stretch of morlet wavelet
-scale = 2; % scale of morlet wavelet
-nangs = 8;
+scale = 1.5; % scale of morlet wavelet
+nangs = 16;
 hopsize = 5;
 halfwindowsize = 2;
 magthreshold = [];

@@ -87,7 +87,7 @@ end
 
 M = imbinarize(mx);
 s = std(ds(V).*repmat(M,[1 1 size(V,3)]),0,3);
-bw = s > 0.25;
+bw = s > 0.1;
 
 %% estimate frequency
 disp('estimating frequency')
@@ -254,7 +254,7 @@ outPathPF = [rpath filesep fname '_DWPrdFrq.csv'];
 
 
 if ~isempty(prms)
-    prd = f.b1*nFrames;
+    prd = 2*pi/f.b1
     c = prms(1,:)/(2*pi)*prd;
     r = prms(2,:)/(2*pi)*prd;
     o = prms(3,:)/(2*pi)*prd;

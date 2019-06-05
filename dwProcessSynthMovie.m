@@ -102,6 +102,35 @@ bw = s > 0.1;
 % imshow(bw)
 disp('done')
 
+%% inspect single 'track'
+
+[r,c] = find(bw);
+index = 56; % should be between 1 and length(r)
+l = squeeze(V(r(index),c(index),:));
+dsl = ds(l)';
+
+for iFrame = 1:nFrames
+    I = repmat(S(:,:,iFrame),[1 1 3]);
+    row0 = X(r(index),c(index),iFrame);
+    col0 = Y(r(index),c(index),iFrame);
+    angle = A(r(index),c(index),iFrame);
+    d = ds(V(r(index),c(index),iFrame));
+    for k = -d/2:d/2
+        row = round(row0+k*cos(angle+pi/2));
+        col = round(col0+k*sin(angle+pi/2));
+        if row >= 1 && row <= size(I,1) && col >= 1 && col <= size(I,2)
+            I(row,col,:) = 0;
+            I(row,col,2) = 1;
+        end
+    end
+    subplot(1,2,1)
+    imshow(I)
+    subplot(1,2,2)
+    plot(1:nFrames,dsl,'.'), hold on
+    plot(iFrame,dsl(iFrame),'o'), hold off
+    pause(0.1)
+end
+
 %% estimate frequency
 disp('estimating frequency')
 

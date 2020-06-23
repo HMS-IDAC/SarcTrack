@@ -254,7 +254,7 @@ outPathPF = [rpath filesep fname '_DWPrdFrq.csv'];
 
 
 if ~isempty(prms)
-    prd = 2*pi/f.b1
+    prd = 2*pi/f.b1;
     c = prms(1,:)/(2*pi)*prd;
     r = prms(2,:)/(2*pi)*prd;
     o = prms(3,:)/(2*pi)*prd;

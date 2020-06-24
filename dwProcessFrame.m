@@ -5,13 +5,11 @@ clear, clc
 path = '~/Downloads/SarcTrackSampleVideos/Sample2.avi';
 
 v = VideoReader(path);
-T = zeros(v.Height,v.Width,v.FrameRate*v.Duration);
-frameCount = 0;
+T = [];
 while hasFrame(v)
-    frameCount = frameCount+1;
     frame = readFrame(v);
     I = double(rgb2gray(frame))/255;
-    T(:,:,frameCount) = I;
+    T = cat(3,T,I);
 end
 timeLapseViewTool(T);
 

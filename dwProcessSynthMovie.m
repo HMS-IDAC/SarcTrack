@@ -307,8 +307,7 @@ fprintf('\n')
 
 prms0 = prms;
 if ~isempty(prms0)
-%     prd = f.b1*nFrames; % incorrect period
-    prd = 2*pi/f.b1; % correct period
+    prd = 2*pi/f.b1;
     c = prms0(1,:)/(2*pi)*prd;
     r = prms0(2,:)/(2*pi)*prd;
     o = prms0(3,:)/(2*pi)*prd;

@@ -1,3 +1,5 @@
+NOTE: a new version is available; please use that one instead: https://github.com/HMS-IDAC/SarcTrack2
+
 # SarcTrack
 
 Sarcomere Detection and Contraction Analysis
@@ -22,4 +24,4 @@ Step 6:
 
 Sample dataset: https://www.dropbox.com/s/k1p65tnfeixp9q0/SarcTrackSampleVideos.zip?dl=0
 
-To generate and analyze synthetic movies, use dwGenerateSynthMovie.m, dwProcessSynthFrame.m, and dwProcessSynthMovie.m
+To generate and analyze synthetic movies, as well as to understand the code, use dwGenerateSynthMovie.m, dwProcessSynthFrame.m, and dwProcessSynthMovie.m
